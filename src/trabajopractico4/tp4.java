@@ -87,12 +87,17 @@ public class tp4 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void ConvertirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConvertirActionPerformed
-       double cel = Double.parseDouble(Celsius.getText());
+       try{
+           
+       
+        double cel = Double.parseDouble(Celsius.getText());
        double conver = cel * 9/5 + 32;
        JOptionPane.showMessageDialog( this,"La conversión es: "+conver+" Fahrenheit.");
     }//GEN-LAST:event_ConvertirActionPerformed
-
-    
+catch(NumberFormatException e) {
+    JOptionPane.showMessageDialog(this," Error!! debe ingresar un numero para la temperatura valida");
+}
+    }
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
